@@ -27,9 +27,10 @@ function toggleDarkMode() {
 
 // Initialize dark mode state based on current state
 document.addEventListener("DOMContentLoaded", () => {
+  const darkModeButton = document.getElementById("dark-mode-button");
   if (document.body.classList.contains("dark-mode")) {
-    document.querySelector(".switch").classList.add("dark-mode");
+    darkModeButton.classList.add("dark-mode");
   }
+  darkModeButton.addEventListener("click", toggleDarkMode);
 });
 
-document.getElementById("dark-mode-button").addEventListener("click", toggleDarkMode);
