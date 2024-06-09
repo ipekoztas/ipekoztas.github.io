@@ -469,3 +469,82 @@ footer p {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Dark mode toggle switch */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.switch::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.3s;
+}
+
+body.dark-mode .switch {
+  background-color: #4caf50;
+}
+
+body.dark-mode .switch::after {
+  transform: translateX(26px);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #323131;
+  color: #e0e0e0;
+}
+
+body.dark-mode nav {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .nav-links a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .menu-links {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .details-container,
+body.dark-mode .about-pic,
+body.dark-mode .color-container {
+  background-color: #222222;
+  border-color: #333;
+}
+
+body.dark-mode .popup-content {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+/* Ensure all text is bright in dark mode */
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode a {
+  color: #e0e0e0;
+}
+

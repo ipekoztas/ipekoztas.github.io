@@ -20,3 +20,16 @@ window.onclick = function(event) {
     popup.style.display = "none";
   }
 }
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+
+// Initialize dark mode state based on current state
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.body.classList.contains("dark-mode")) {
+    document.querySelector(".switch").classList.add("dark-mode");
+  }
+});
+
+document.getElementById("dark-mode-button").addEventListener("click", toggleDarkMode);
